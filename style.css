@@ -63,6 +63,7 @@ h3 {
   color: var(--color-dark-navy-blue);
 }
 
+
 h1 {
   font-size: var(--h1);
 }
@@ -73,6 +74,7 @@ h2 {
 
 h3 {
   font-size: var(--h3);
+  white-space: pre-line;
 }
 
 /*---------------
@@ -228,6 +230,7 @@ h3 {
 
 .overlay img {
   mix-blend-mode: multiply;
+  opacity: 0.75;
   filter: brightness(110%);
   width: 100%;
 }
@@ -420,11 +423,11 @@ h3 {
   }
 
   .overlay {
-    max-height: 600px;
+    max-height: 500px;
   }
 
   .mechanical-keyboard-section-images picture img {
-    max-height: 600px;
+    max-height: 500px;
   }
 
   .mechanical-keyboard-section {
@@ -462,6 +465,8 @@ h3 {
   .feature:nth-child(4) {
     margin-block-start: unset;
   }
+
+
 }
 
 @media screen and (min-width: 2200px) {
