@@ -1,0 +1,472 @@
+/*---------------------
+  Universal CSS
+-----------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow", sans-serif;
+}
+
+/* if we didnot use this we will not be able to center the card verically. */
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  /* same as max-width: 100%; but its a logical property */
+  max-inline-size: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*------------------
+  Custom Elements
+-------------------*/
+
+p {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: var(--color-light-navy-blue);
+  margin-block-start: 2em;
+  font-weight: 500;
+  max-inline-size: 45ch;
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-wrap: balance;
+  color: var(--color-dark-navy-blue);
+}
+
+h1 {
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+/*---------------
+  Colors
+----------------*/
+
+:root {
+  --color-bright-orange: hsl(22, 89%, 52%);
+  --color-light-orange: hsl(22, 100%, 69%);
+  --color-dark-navy-blue: hsl(220, 50%, 17%);
+  --color-light-navy-blue: hsl(221, 23%, 58%);
+  --color-light-gray: hsl(198, 28%, 93%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+/*---------------
+  Font Sizes
+----------------*/
+
+:root {
+  --h1: clamp(3rem, 2.8571rem + 0.7143vw, 3.5rem);
+  --h2: clamp(2rem, 2rem + 0vw, 2rem);
+  --h3: clamp(1.5rem, 1.5rem + 0vw, 1.5rem);
+}
+
+/*--------
+  Body
+--------*/
+
+.container {
+  padding-inline: 1.5em;
+  max-width: 2200px;
+  margin-inline: auto;
+}
+
+.hero-left-spacing {
+  padding-inline-start: 1.5em;
+}
+
+.spacing-top {
+  margin-block-start: 4em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.margin-block-start-1em {
+  margin-block-start: 1em;
+}
+
+.margin-block-start-1-5em {
+  margin-block-start: 1.5em;
+}
+
+.margin-block-start-2em {
+  margin-block-start: 2em;
+}
+
+.btn {
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1em 1.2em;
+  border-radius: 7px;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.btn-gray {
+  color: var(--color-dark-navy-blue);
+  background-color: var(--color-light-gray);
+}
+
+.btn-gray:hover {
+  background-color: var(--color-dark-navy-blue);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.btn-orange {
+  background-color: var(--color-bright-orange);
+  color: var(--color-white);
+}
+
+.btn-orange:hover {
+  background-color: var(--color-light-orange);
+  cursor: pointer;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-start: 2em;
+  margin-inline: auto !important ;
+}
+
+.hero-section {
+  display: grid;
+  gap: 3em;
+}
+
+.hero-section-btn {
+  display: flex;
+  align-items: center;
+}
+
+.hero-section-btn p {
+  margin-block-start: unset;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-inline-start: 3em;
+}
+
+.hero-section-picture img {
+  border-radius: 2em 0 0 2em;
+  width: 100%;
+  /* margin-left: auto; */
+  max-height: 400px;
+}
+
+.rounded-square,
+.second-rounded-square {
+  display: none;
+}
+
+.mechanical-keyboard-section {
+  display: flex;
+  flex-direction: column;
+  margin-block-start: 1.5em;
+  gap: 4em;
+}
+
+.mechanical-keyboard-section .container:nth-child(2) {
+  padding-inline: unset;
+  max-width: unset;
+  margin-inline: unset;
+}
+
+.mechanical-keyboard-section-images {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5em;
+  padding-inline-end: 2em !important ;
+}
+
+.overlay {
+  background-color: var(--color-bright-orange);
+  border-radius: 0 2em 2em 0;
+  max-height: 320px;
+}
+
+.overlay img {
+  mix-blend-mode: multiply;
+  filter: brightness(110%);
+  width: 100%;
+}
+
+.mechanical-keyboard-section-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.mechanical-keyboard-section-images picture img {
+  border-radius: 2em;
+  max-height: 320px;
+  width: 100%;
+}
+
+.mechanical-keyboard-section-text p {
+  max-inline-size: 60ch;
+  margin-inline: auto;
+}
+
+.features {
+  margin-block-start: 8em;
+  display: grid;
+}
+
+.feature {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.feature:not(:first-child) {
+  margin-block-start: 6em;
+}
+
+.features h3 {
+  margin-block-start: 2em;
+}
+
+.feature-icon svg {
+  height: auto;
+}
+
+.feature-icon {
+  background-color: var(--color-bright-orange);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 1em;
+}
+
+.footer {
+  padding-block: 7em 3em;
+  text-align: center;
+}
+
+.footer p {
+  max-inline-size: unset;
+}
+
+/*----------------
+  Media Queries
+-----------------*/
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding-inline: 2.5em;
+    margin-inline: unset;
+  }
+
+  .nav-bar {
+    margin-block-start: 4em;
+  }
+
+  .hero-left-spacing {
+    padding-inline-start: 2.5em;
+  }
+
+  .hero-section {
+    grid-template-columns: 1.5fr 1.2fr;
+    gap: 2em;
+  }
+
+  .hero-section-content {
+    padding-block: 5em;
+  }
+
+  .hero-section-picture img {
+    max-height: unset;
+    width: 100%;
+    object-position: left;
+  }
+
+  .mechanical-keyboard-section-images {
+    padding-inline-end: unset;
+  }
+
+  .mechanical-keyboard-section-images {
+    grid-template-columns: 1fr 2.5fr;
+  }
+
+  .mechanical-keyboard-section .container:nth-child(2) {
+    padding-inline: 2.5em;
+    max-width: 1800px;
+  }
+
+  .mechanical-keyboard-section-text {
+    flex-direction: row;
+    text-align: left;
+    gap: 2em;
+  }
+
+  .mechanical-keyboard-section-text p {
+    margin-block-start: unset;
+    margin-inline: unset;
+  }
+
+  .overlay {
+    border-radius: 2em;
+    max-height: 480px;
+  }
+
+  .mechanical-keyboard-section-images picture img {
+    border-radius: 2em;
+    max-height: 480px;
+  }
+
+  h2 {
+    max-inline-size: 25ch;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+
+  .feature {
+    text-align: left;
+    margin-inline: auto;
+  }
+
+  .feature:nth-child(2) {
+    margin-block-start: unset;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    padding-inline: 10em;
+  }
+
+  h2 {
+    max-inline-size: unset;
+  }
+
+  .hero-left-spacing {
+    padding-inline-start: 10em;
+  }
+
+  .hero-section {
+    grid-template-columns: 1.5fr 3fr 1fr;
+    overflow: hidden;
+    max-width: 2200px;
+    margin-inline: auto;
+  }
+
+  .hero-section-picture img {
+    border-radius: 2em;
+    max-height: 480px;
+    margin-inline-start: 6em;
+  }
+
+  .rounded-square {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+  }
+
+  .second-rounded-square {
+    display: block;
+    position: absolute;
+    left: -10%;
+    bottom: 0;
+  }
+
+  .spacing-top {
+    margin-block-start: 6em;
+  }
+
+  .overlay {
+    max-height: 600px;
+  }
+
+  .mechanical-keyboard-section-images picture img {
+    max-height: 600px;
+  }
+
+  .mechanical-keyboard-section {
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+    max-width: 2200px;
+    margin-inline: auto;
+    padding-inline: 10em;
+  }
+
+  .mechanical-keyboard-section-text {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-inline-size: 29ch;
+  }
+
+  .mechanical-keyboard-section .container:last-child {
+    padding-inline: unset;
+  }
+
+  .mechanical-keyboard-section .container:nth-child(2) {
+    padding-inline: unset;
+  }
+
+  .features {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4em;
+    max-width: 2200px;
+    margin-inline: auto;
+  }
+
+  .feature:nth-child(3),
+  .feature:nth-child(4) {
+    margin-block-start: unset;
+  }
+}
+
+@media screen and (min-width: 2200px) {
+  .hero-section,
+  .mechanical-keyboard-section {
+    overflow: unset;
+  }
+}
